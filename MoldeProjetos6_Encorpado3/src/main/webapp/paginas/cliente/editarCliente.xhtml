@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+      
+<ui:composition template="/WEB-INF/templates/layout.xhtml">
+
+<!-- DEFINE É USADO PARA COLOCAR O CODIGO QUE É DIFERENTE DO TEMPLATE -->
+	<ui:define name="corpo">
+
+<!-- FORM NECESSARIO -->
+<form>
+
+<!--Teste do painel bootstrap -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><h3>Edição de Dados do Cliente</h3></div>
+		
+		<div class="panel-body">
+
+	<div class="col-md-11 form-group">
+				<label>Nome</label><br></br>
+				<label>Input</label>
+			</div>
+			
+			<div class="col-md-12 form-group">
+				<label>Data de Nascimento</label>
+			</div>
+			
+			<div class="col-md-12 form-group">
+				<label>Calendario</label>
+			</div>
+			
+	<!-- Necessario row para voltar a esquerda o telefone -->		
+	<div class="row">
+		<div class="col-md-12 form-group">	
+			<div class="col-md-2 form-group">
+				<label>DDD</label><br></br>
+				<label>Input</label>
+			</div>
+			<div class="col-md-4 form-group">
+				<label>Numero</label><br></br>
+				<label>Input</label>
+			</div>
+		</div>
+	</div>
+			
+			<div class="col-md-6 form-group">
+				<label>Email</label><br></br>
+				<label>Input</label>
+			</div>
+			
+			
+			<div class="col-md-7 form-group">
+				<label>Renda Mensal</label><br></br>
+				<label>Input</label>
+			</div>
+
+			<div class="col-md-10 form-group">
+				<label>Genero</label><br></br>
+				<label>ComboBox</label>
+			</div>
+
+			<div class="col-md-12 form-group">
+				<button>Salvar</button>
+			</div>
+
+
+</div> <!-- FINAL DO CORPO DO PAINEL -->
+	</div> <!-- FINAL DO PAINEL -->
+	
+</form>	
+	</ui:define>
+</ui:composition>
+
+</html>

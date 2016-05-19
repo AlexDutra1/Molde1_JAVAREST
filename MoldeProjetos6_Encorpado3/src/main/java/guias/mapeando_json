@@ -1,0 +1,11 @@
+1]Coloque a anotacao na classe do modelo: 
+
+@XmlRootElement(name = "actor")
+-------------------------------------------------------------------------------
+2]Coloque a anotação nos get dos atributos desejados da entidade no modelo:
+
+@XmlElement
+public String getNome() {
+	return nome;
+}
+-------------------------------------------------------------------------------

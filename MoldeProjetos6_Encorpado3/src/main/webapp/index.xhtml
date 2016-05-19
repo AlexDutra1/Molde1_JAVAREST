@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app="app"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html" 
+xmlns:p="http://primefaces.org/ui" 
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:andii="http://componentes.customizados.com"
+xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<!-- Use Bootstrap -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+<script type="text/javascript" src="/resources/js/app.js"></script>
+<script type="text/javascript" src="resources/js/app.js"></script>
+<!-- /MoldeProjetos1/src/main/webapp/resources/js/app.js -->
+<script src="app.js"></script>
+
+</head>
+
+<body ng-controller="HttpCtrl as app">
+
+<div class="container">
+	
+	<form>
+	
+	<label>VERIFICANDO SE ANGULAR ESTA ATIVO</label>
+	<h1>TABELA COM CLIENTES</h1>
+	<table >
+	  <tr ng-repeat="a in clientes" >
+	    <td>{{a.nome}}</td>
+	  </tr>
+	</table> 
+	
+	
+	<label>Testa Bootstrap</label><br></br>
+	<button type="button" class="btn btn-default navbar-btn">Sign in</button>
+	<span class="label label-default">Default</span>
+	<span class="label label-primary">Primary</span>
+	<span class="label label-success">Success</span>
+	
+	</form>
+
+</div>
+
+<!-- Incluindo o jQuery que é requisito do JavaScript do Bootstrap -->
+<script src="resources/bootstrap/js/jquery.js"></script>
+
+<!-- Incluindo o JavaScript do Bootstrap -->
+<script src="resources/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html> 
