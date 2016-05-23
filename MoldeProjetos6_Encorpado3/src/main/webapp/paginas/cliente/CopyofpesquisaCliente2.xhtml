@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<head>
+
+<!-- Importa CSS quando o arquivo é xhtml -->
+<link href="#{facesContext.externalContext.requestContextPath}/resources/css/style.css" rel="stylesheet" media="screen" />
+
+<!-- Use Bootstrap -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+<script type="text/javascript" src="resources/js/app.js"></script>
+<script type="text/javascript" src="resources/js/cliente_controller.js"></script>
+
+</head>
+<body>
+
+<!-- 
+<script type="text/javascript" 
+  	src="/JavaServerFaces/faces/javax.faces.resource/common.js?ln=js">
+</script>
+ -->
+
+
+<div class="topo">
+<img src="#{facesContext.externalContext.requestContextPath}/resources/img/Banner Arquitetura JAVA EE.jpg"
+width="100%" height="100%"></img>
+</div>
+
+<div class="menu">
+
+<nav class="navbar navbar-custom" 
+		style="margin: 10px 0">
+			<div class="container-fluid">
+				<div class="navbar-header">
+			    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        	<span class="btn sr-only">Toggle navigation</span>
+				        <span class="btn icon-bar"></span>
+				        <span class="btn icon-bar"></span>
+				        <span class="btn icon-bar"></span>
+			      	</button>
+			    </div>
+			    
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+			      	<ul class="nav navbar-nav" style="color: black;">
+			      	
+			      		<li class="dropdown" style="">
+			      			<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
+			      			style="color: white; background-color: #28166F; border-radius: 10px; margin: 4%;"
+			      			aria-haspopup="true" aria-expanded="false">Clientes<span class="caret"></span></a>
+			      			<ul class="dropdown-menu">
+			      				<li><label>teste</label></li>
+			            		<li><h:commandLink action="cadastroCliente" value="Cadastrar Cliente com JSF" /></li>
+			            		<li><h:commandLink action="pesquisaCliente" value="Pesquisar Cliente" /></li>
+			          		</ul>
+			      		</li>
+			      		
+			      		<li class="dropdown" style="">
+			      			<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
+			      			style="color: white; background-color: #28166F; border-radius: 10px; margin: 4%;"
+			      			aria-haspopup="true" aria-expanded="false">Usuários<span class="caret"></span></a>
+			      			<ul class="dropdown-menu">
+			            		<li><h:commandLink action="cadastroUsuario" value="Cadastrar Usuários" /></li>
+			            		<li><h:commandLink action="pesquisaUsuario" value="Pesquisar Usuários" /></li>
+			          		</ul>
+			      		</li>
+			      		
+			      		<li class="dropdown" style="">
+			      			<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
+			      			style="color: white; background-color: #28166F; border-radius: 10px; margin: 4%;"
+			      			aria-haspopup="true" aria-expanded="false">Endereço<span class="caret"></span></a>
+			      			<ul class="dropdown-menu">
+			            		<li><h:commandLink action="cadastroEndereco" value="Cadastrar Endereco" /></li>
+			            		<li><h:commandLink action="pesquisaEndereco" value="Pesquisar Endereco" /></li>
+			          		</ul>
+			      		</li>
+			      		
+			      		<li class="dropdown" style="">
+			      			<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
+			      			style="color: white; background-color: #28166F; border-radius: 10px; margin: 4%;"
+			      			aria-haspopup="true" aria-expanded="false">Estado <span class="caret"></span></a>
+			      			<ul class="dropdown-menu">
+			            		<li><h:commandLink action="cadastroEstado" value="Cadastrar Estado" /></li>
+			            		
+			          		</ul>
+			      		</li>
+			      		
+			      		<li class="dropdown" style="">
+			      			<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
+			      			style="color: white; background-color: #28166F; border-radius: 10px; margin: 4%;"
+			      			aria-haspopup="true" aria-expanded="false">Municipio<span class="caret"></span></a>
+			      			<ul class="dropdown-menu">
+			            		<li><h:commandLink action="cadastroMunicipio" value="Cadastrar Cidade" /></li>
+			          		</ul>
+			      		</li>
+			      		
+			      		<li class="dropdown" style="position:absolute;left:90%; ">
+			      			<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
+			      			style="color: white; background-color: #28166F; border-radius: 10px; margin:	4%;"
+			      			aria-haspopup="true" aria-expanded="false">Conta<span class="caret"></span></a>
+			      			<ul class="dropdown-menu">
+			            		<li><h:commandLink value="Editar Conta" action="login" /></li>
+			            		<li><h:commandLink value="Trocar de conta" action="trocarlogin"/></li>
+			            		<li><h:commandLink value="Logout" /></li>
+			          		</ul>
+			      		</li>
+			      	</ul>
+				</div>
+			</div><!-- FIM DO CONTAINER-FLUID -->
+		</nav>
+</div>
+
+<div class="corpo">
+teste corpo
+
+
+		<!-- FORM NECESSARIO -->
+		<form id="formPesquisaCliente">
+
+			<!-- PAINEL GERAL -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 style="font-family: Impact; font-weight: bold">Pesquisa de Clientes</h3>
+				</div>
+			<div class="panel-body">
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4>Filtrar</h4>
+				</div>
+			<div class="panel-body">
+			
+			
+			<!-- PESQUISA POR NOME -->
+			<div class="col-md-11 form-group">
+				<label>Nome</label><br></br>
+				<label>Input</label>
+			</div>
+			 
+			<!-- PESQUISA POR EMAIL -->
+			<div class="col-md-11 form-group">
+				<label>Email</label><br></br>
+				<label>Input</label>
+			</div>
+			
+			<!-- PESQUISA POR DATA DE NASCIMENTO -->
+			<div class="col-md-11 form-group">
+				<label>Data de nascimento</label>
+			</div>
+			
+			<div class="col-md-11 form-group">
+				<label>Calendario para escolha da data</label><br></br>
+			</div>
+			
+			<!-- PESQUISA POR GENERO -->
+			
+			<div class="col-md-10 form-group">
+				<label>Genero</label><br></br>
+				<label>RadioButton- MASCULINO-FEMININO</label>
+			</div>
+
+			<!-- PESQUISA POR RENDA MENSAL -->
+			<div class="col-md-11 form-group">
+				<label>Renda Mensal</label><br></br>
+				<label>Input</label>
+			</div>
+
+			<!-- PESQUISA POR LAGRADOURO -->
+			<div class="col-md-11 form-group">
+				<label>Endereco-Lagradouro</label><br></br>
+				<label>Input</label>
+			</div>
+		 	
+		 	<!-- PESQUISA POR ESTADO -->
+			<div class="col-md-11 form-group">
+				<label>Endereco-Estado</label><br></br>
+				<label>Combobox</label>
+			</div>
+		 	
+			<div class="col-md-11 form-group">
+				<label>Endereco-Municipio</label><br></br>
+				<label>Combobox</label>
+			</div>
+			
+			<div class="col-md-11 form-group">
+				<label>Telefone-Numero</label><br></br>
+				<label>Input</label>
+			</div>
+			
+			<div class="col-md-10 form-group">
+				<button>Pesquisar</button>
+			</div>
+			
+			</div><!-- FINAL DO CORPO DO PAINEL -->
+			</div><!-- FINAL DO PAINEL -->
+
+			<!-- TABELA -->
+				<label>Tabela de clientes</label>
+				
+			</div> <!-- FINAL DO CORPO DO PAINEL -->
+		</div><!-- FINAL DO PAINEL GERAL -->
+
+		</form>
+		
+<!-- FIM CORPO -->
+</div>
+
+<div class="rodape">
+<img src="#{facesContext.externalContext.requestContextPath}/resources/img/rodape DUT.jpg"
+width="100%" height="100%"></img>
+</div>
+
+<!-- Incluindo o jQuery que é requisito do JavaScript do Bootstrap -->
+<script src="resources/bootstrap/js/jquery.js"></script>
+
+<!-- Incluindo o JavaScript do Bootstrap -->
+<script src="resources/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

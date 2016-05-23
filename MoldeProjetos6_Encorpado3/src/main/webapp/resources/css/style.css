@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+
+.topo {
+height:350px;
+	border-bottom:1px solid #c30;
+}
+
+.menu {
+display: inline-block;
+background-color: #ccc;
+color: #444;
+padding: 10px 20px;
+text-decoration: none;
+box-sizing: border-box;
+font-family: Helvetica, Arial, sans-serif;
+font-size: 14px;
+border: 0px;
+width: 1295px;
+}
+
+.corpo {
+margin:0;
+	padding:0;
+	border:none;
+	font: 11px/1.5 Verdana, Arial, Helvetica, sans-serif;
+	background:#ffe;
+	color:#333;
+	text-align:center;
+}
+
+.rodape {
+clear:both;
+	text-align:center;
+	border-top:1px solid #c30;
+}
